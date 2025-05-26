@@ -1,0 +1,687 @@
+/*varibili per evitare ripetizioni di codice*/
+:root {
+    --primary-gradient: linear-gradient(45deg, #00dbf7, #0099ff);
+    --glow-shadow: 0 0 24px rgba(0, 219, 247, 0.18);
+    --border-glow: 1px solid rgba(0, 219, 247, 0.2);
+    --bg-dark: rgba(0, 0, 0, 0.4);
+    --text-glow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+
+.player-content {
+    padding: 20px 0 40px;
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+    color: white;
+}
+
+.player-container {
+    display: flex;
+    gap: 5rem;
+    align-items: flex-start;
+    margin-top: 0;
+}
+
+.player-image {
+    flex: 0 0 30%;
+    position: sticky;
+    top: 65px;
+    height: calc(100vh - 80px);
+    border-radius: 15px;
+    overflow: hidden;
+    margin-left: -4rem;
+    box-shadow: 0 0 40px rgba(0, 219, 247, 0.15);
+    border: var(--border-glow);
+    backdrop-filter: blur(5px);
+}
+
+.player-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+    filter: brightness(1.05) contrast(1.05);
+}
+
+.player-info {
+    flex: 0 0 55%;
+    padding: 2.5rem;
+    margin-right: 2rem;
+}
+
+.player-info h1 {
+    font-size: 3.2rem;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 10px rgba(0, 219, 247, 0.5);
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+}
+
+.player-info .intro {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.3rem;
+    color: #f0f0f0;
+    margin-bottom: 0;
+    text-shadow: var(--text-glow);
+}
+
+.story-container {
+    max-width: 1400px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.story-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6rem;
+    gap: 4rem;
+    background: var(--bg-dark);
+    border: var(--border-glow);
+    border-radius: 20px;
+    padding: 2.5rem;
+    backdrop-filter: blur(8px);
+    box-shadow: var(--glow-shadow);
+    transition: all 0.3s ease;
+}
+
+.story-section.right {
+    flex-direction: row-reverse;
+}
+
+.text-content {
+    flex: 0 0 50%;
+}
+
+.story-section h2, .story-content h2, .zigzag-text h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    color: #00dbf7;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 15px rgba(0, 219, 247, 0.5);
+    letter-spacing: 0.5px;
+}
+
+.story-section p, .story-content p, .zigzag-text p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: #f0f0f0;
+    text-shadow: var(--text-glow);
+    margin-bottom: 1.2rem;
+}
+
+.story-content, .zigzag-text {
+    background: rgba(0,0,0,0.55);
+    border-radius: 18px;
+    padding: 2.2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 18px rgba(0,219,247,0.10);
+}
+
+.story-content h2 {
+    font-size: 2.2rem;
+    text-shadow: 0 0 15px rgba(0, 219, 247, 0.3);
+}
+
+.story-content p {
+    font-size: 1.3rem;
+}
+
+.story-image, .zigzag-img {
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: var(--glow-shadow);
+    border: 1.5px solid rgba(0, 219, 247, 0.22);
+}
+
+.story-image {
+    width: 100%;
+    max-width: 800px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.story-image img, .zigzag-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.4s cubic-bezier(.4,2,.6,1);
+}
+
+.story-image:hover img, .zigzag-img:hover img {
+    transform: scale(1.04);
+}
+
+.story-image img[alt="Giannis Antetokounmpo giovane"] {
+    object-fit: contain;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+.achievements-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5rem;
+    margin: 3rem auto 4rem auto;
+    max-width: 1400px;
+    padding: 0 2rem;
+}
+
+.achievements {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    flex: 1;
+}
+
+.hero-card {
+    background: rgba(0,0,0,1);
+    border-radius: 24px;
+    box-shadow: 0 0 32px rgba(0,219,247,0.13);
+    padding: 2.5rem 2rem 2rem 2rem;
+    margin-bottom: 3.5rem;
+    text-align: center;
+}
+
+.hero-card h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.7rem;
+    background: linear-gradient(90deg, #00dbf7 10%, #0099ff 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 4px 24px rgba(0, 219, 247, 0.25);
+    margin-bottom: 0.7rem;
+    letter-spacing: 1.5px;
+    line-height: 1.15;
+}
+
+.hero-card .subtitle {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.5rem;
+    color: #00dbf7;
+    margin-bottom: 1.2rem;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 10px rgba(0,219,247,0.18);
+}
+
+.hero-card .intro {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.3rem;
+    color: #f0f0f0;
+    margin-bottom: 0;
+    text-shadow: var(--text-glow);
+}
+
+
+.zigzag-section {
+    display: flex;
+    align-items: stretch;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.zigzag-section.right .zigzag-text { order: 2; }
+.zigzag-section.right .zigzag-img { order: 1; }
+.zigzag-section.left .zigzag-text { order: 1; }
+.zigzag-section.left .zigzag-img { order: 2; }
+
+.zigzag-text {
+    flex: 1 1 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.zigzag-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+}
+
+.zigzag-text p {
+    font-size: 1.3rem;
+}
+
+.zigzag-img {
+    flex: 0 0 260px;
+    max-width: 260px;
+    min-width: 180px;
+    height: 900px;
+    background: rgba(0,0,0,0.10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.achievements-vertical {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2.5rem;
+    margin: 4rem auto;
+    max-width: 1000px;
+    padding: 0 2rem;
+}
+
+.achievement-card {
+    flex: 1;
+    min-width: 280px;
+    background: linear-gradient(145deg, var(--bg-dark), rgba(0,219,247,0.05));
+    border: var(--border-glow);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 18px rgba(0,219,247,0.10);
+}
+
+.achievement-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 219, 247, 0.2);
+    background: linear-gradient(145deg, rgba(0,0,0,0.5), rgba(0,219,247,0.08));
+}
+
+.achievement-card i {
+    font-size: 2.2rem;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem;
+}
+
+.achievement-card h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    color: #00dbf7;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 10px rgba(0, 219, 247, 0.4);
+}
+
+.achievement-card p {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1rem;
+    color: #ffffff;
+    text-shadow: var(--text-glow);
+}
+
+
+.video-section {
+    margin-top: 4rem;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.video-section h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    color: #00dbf7;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 10px rgba(0, 219, 247, 0.3);
+    letter-spacing: 1px;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-bottom: 46.25%;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: var(--glow-shadow);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    filter: brightness(1.05) contrast(1.05);
+}
+
+.video-container:hover iframe {
+    transform: scale(1.02);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(6px);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links ul {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00dbf7;
+    text-shadow: 0 0 10px rgba(0, 219, 247, 0.5);
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        position: relative;
+        padding: 0.8rem 1.5rem;
+    }
+    
+    .toggle-button {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        cursor: pointer;
+    }
+    
+    .toggle-button .bar {
+        height: 3px;
+        width: 100%;
+        background-color: #00dbf7;
+        border-radius: 10px;
+    }
+    
+    .nav-links {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 1rem;
+    }
+    
+    .nav-links.active { display: flex; }
+    .nav-links ul { width: 100%; text-align: center; }
+    
+    .player-content { padding: 15px 1rem; }
+    .hero-card { padding: 2rem 1.5rem; }
+    .hero-card h1 { font-size: 2rem; }
+    .hero-card .subtitle { font-size: 1.2rem; }
+    .hero-card .intro { font-size: 1.1rem; }
+    
+    .zigzag-section { flex-direction: column; gap: 1.5rem; }
+    .zigzag-section.left .zigzag-text, .zigzag-section.right .zigzag-text { order: 2; }
+    .zigzag-section.left .zigzag-img, .zigzag-section.right .zigzag-img { order: 1; }
+    .zigzag-text { padding: 1.5rem; }
+    .zigzag-text h2 { font-size: 1.8rem; }
+    .zigzag-text p { font-size: 1.1rem; line-height: 1.6; }
+    .zigzag-img { height: 280px; }
+    
+    .achievements-vertical { max-width: 280px; gap: 1rem; }
+    .achievement-card { padding: 1.2rem; }
+    .achievement-card h3 { font-size: 1.1rem; }
+    .achievement-card i { font-size: 1.8rem; }
+    .video-container { max-width: 320px; }
+}
+
+@media (max-width: 480px) {
+    .hero-card h1 { font-size: 1.8rem; }
+    .zigzag-img { height: 220px; }
+    .zigzag-text h2 { font-size: 1.6rem; }
+    .zigzag-text p { font-size: 1rem; }
+    .achievements-vertical { max-width: 240px; }
+    .video-container { max-width: 280px; }
+}
+
+
+@media (min-width: 1921px) {
+    .player-content { max-width: 80%; margin: 40px auto; padding: 40px 2rem; }
+    .zigzag-section { max-width: 1800px; margin-left: auto; margin-right: auto; }
+    .zigzag-section.left .zigzag-text, .zigzag-section.right .zigzag-text,
+    .zigzag-section.left .zigzag-img, .zigzag-section.right .zigzag-img { flex: 0 0 45%; max-width: 45%; }
+    .hero-card { max-width: 1800px; margin-left: auto; margin-right: auto; }
+    .achievements-vertical { max-width: 400px; }
+    .video-container { max-width: 1400px; }
+}
+
+@media (min-width: 1441px) and (max-width: 1920px) {
+    .player-content { max-width: 85%; }
+    .zigzag-section { max-width: 1400px; margin-left: auto; margin-right: auto; }
+    .zigzag-section.left .zigzag-text, .zigzag-section.right .zigzag-text { flex: 0 0 45%; max-width: 45%; }
+    .video-container { max-width: 45%; }
+}
+
+@media (min-width: 1080px) and (max-width: 1920px) {
+    .player-content { max-width: 1400px; padding: 0 2rem; }
+    .zigzag-section { max-width: 1200px; margin-left: auto; margin-right: auto; gap: 3rem; }
+    .zigzag-section.left .zigzag-text, .zigzag-section.right .zigzag-text { flex: 0 0 35%; max-width: 35%; padding: 2rem; }
+    .zigzag-section.left .zigzag-img, .zigzag-section.right .zigzag-img { flex: 0 0 60%; max-width: 60%; }
+    .hero-card { max-width: 1200px; margin: 0 auto 3rem auto; padding: 2.5rem; }
+    .hero-card h1 { font-size: 2.5rem; }
+    .hero-card .subtitle { font-size: 1.4rem; }
+    .achievements-vertical { max-width: 340px; gap: 1.5rem; }
+    .video-container { max-width: 1000px; }
+}
+
+@media (min-width: 1201px) and (max-width: 1440px) {
+    .player-content { max-width: 90%; padding: 0 2rem; }
+    .zigzag-section { max-width: 1200px; margin-left: auto; margin-right: auto; gap: 3rem; }
+    .zigzag-section.left .zigzag-text, .zigzag-section.right .zigzag-text { flex: 0 0 35%; max-width: 35%; padding: 2rem; }
+    .zigzag-section.left .zigzag-img, .zigzag-section.right .zigzag-img { flex: 0 0 60%; max-width: 60%; }
+    .zigzag-text h2 { font-size: 1.8rem; margin-bottom: 1rem; }
+    .zigzag_text p { font-size: 1.2rem; line-height: 1.7; }
+    .hero-card { max-width: 1000px; margin: 0 auto 3rem auto; padding: 2rem; }
+    .hero-card h1 { font-size: 2.4rem; }
+    .achievements-vertical { max-width: 320px; gap: 1.2rem; }
+    .video-container { max-width: 50%; }
+}
+
+.contact-section {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+.contact-methods {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.contact-card {
+    flex: 1;
+    max-width: 300px;
+    background: linear-gradient(145deg, var(--bg-dark), rgba(0,219,247,0.05));
+    border: var(--border-glow);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(8px);
+}
+
+.contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 219, 247, 0.2);
+}
+
+.contact-card i {
+    font-size: 2.5rem;
+    color: #00dbf7;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(0, 219, 247, 0.5);
+}
+
+.contact-card h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.4rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.contact-card p {
+    color: #00dbf7;
+    margin-bottom: 1.5rem;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: linear-gradient(90deg, #00dbf7, #0099ff);
+    border-radius: 25px;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(0, 219, 247, 0.5);
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(0,0,0,0.55);
+    border-radius: 18px;
+    padding: 2.5rem;
+    box-shadow: 0 0 18px rgba(0,219,247,0.10);
+}
+
+.contact-form h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    color: #00dbf7;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(0, 219, 247, 0.3);
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.form-group label {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    color: #888;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #00dbf7;
+    box-shadow: 0 0 10px rgba(0, 219, 247, 0.2);
+    outline: none;
+}
+
+.form-group input:focus ~ label,
+.form-group textarea:focus ~ label,
+.form-group input:valid ~ label,
+.form-group textarea:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #00dbf7;
+    font-size: 0.9rem;
+}
+
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(90deg, #00dbf7, #0099ff);
+    border: none;
+    border-radius: 8px;
+    color: #000;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(0, 219, 247, 0.4);
+}
+
+@media (max-width: 768px) {
+    .contact-methods {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
+}
+
+.background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.3) blur(2px);
+}
+
+ì
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    min-height: 100vh;
+    background: #000; 
+}

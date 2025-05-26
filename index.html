@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Ballerflow</title>
+    <link rel="stylesheet" href="assets/css/login.css">
+    <script src="assets/js/script.js"></script>
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="assets/videos/basketman.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div id="loginWrapper">
+        <form onsubmit="event.preventDefault(); login();">
+            <div class="input-wrapper">
+                <input type="text" id="username" placeholder="Username">
+            </div>
+            <div class="input-wrapper">
+                <input type="password" id="password" placeholder="Password">
+            </div>
+            <button type="submit">Accedi</button>
+        </form>
+    </div>
+</body>
+</html>

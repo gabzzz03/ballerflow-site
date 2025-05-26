@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatti - Ballerflow</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+    
+    <script src="../assets/js/script.js"></script>
+</head>
+<body>
+    <video autoplay muted loop id="bgVideo" class="background-video">
+        <source src="../assets/videos/basketman.mp4" type="video/mp4">
+    </video>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="/pages/giocatori.html"><img src="/icons/logo.png" alt="Ballerflow Logo"></a>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="/pages/giocatori.html">Home</a></li>
+                <li><a href="/pages/storia-basket.html">Storia del basket</a></li>
+                <li><a href="/pages/chi-siamo.html">Chi siamo</a></li>
+            </ul>
+        </div>
+        <div class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <main class="content-container">
+
+        <section class="contact-section">
+            <div class="contact-methods">
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>info@ballerflow.com</p>
+                    <a href="mailto:info@ballerflow.com" class="contact-button">Invia Email</a>
+                </div>
+
+                <div class="contact-card">
+                    <i class="fab fa-instagram"></i>
+                    <h3>Instagram</h3>
+                    <p>@ballerflow</p>
+                    <a href="https://instagram.com/ballerflow" target="_blank" class="contact-button">Seguici</a>
+                </div>
+
+                <div class="contact-card">
+                    <i class="fab fa-twitter"></i>
+                    <h3>Twitter</h3>
+                    <p>@ballerflow</p>
+                    <a href="https://twitter.com/ballerflow" target="_blank" class="contact-button">Seguici</a>
+                </div>
+            </div>
+
+            <form class="contact-form">
+                <h2>Invia un messaggio</h2>
+                <div class="form-group">
+                    <input type="text" id="name" name="name" required>
+                    <label for="name">Nome</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" required></textarea>
+                    <label for="message">Messaggio</label>
+                </div>
+                <button type="submit" class="submit-button">Invia Messaggio</button>
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>
